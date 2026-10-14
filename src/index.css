@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: #FAF8F2;
+    color: #2F2823;
+  }
+}
+
+/* Elegant Paper Texture & Subtle Grain */
+.bg-paper-pattern {
+  background-color: #FAF8F2;
+  background-image: radial-gradient(#d4af77 0.75px, transparent 0.75px), radial-gradient(#d4af77 0.75px, #FAF8F2 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  background-opacity: 0.15;
+}
+
+/* Glassmorphism Romantic Style */
+.glass-card {
+  background: rgba(253, 252, 249, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 103, 0.25);
+  box-shadow: 0 10px 30px -10px rgba(70, 87, 69, 0.08), 0 4px 6px -2px rgba(197, 160, 89, 0.05);
+}
+
+.glass-card-dark {
+  background: rgba(47, 40, 35, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 103, 0.35);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #a67d25 0%, #d4af67 45%, #836125 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-border {
+  border-image: linear-gradient(to bottom, #d4af67, #eedeb8, #d4af67) 1;
+}
+
+/* Gold Button Glow */
+.btn-gold {
+  background: linear-gradient(135deg, #C59B27 0%, #DCB85E 50%, #B8860B 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(197, 155, 39, 0.35);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-gold:hover {
+  box-shadow: 0 6px 20px rgba(197, 155, 39, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-gold:active {
+  transform: translateY(0);
+}
+
+/* Elegant Decorative Lines */
+.ornament-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.ornament-divider::before,
+.ornament-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(197, 155, 39, 0.4), transparent);
+}
+
+/* Reduced Motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
